@@ -15,6 +15,7 @@ class SaudacaoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_saudacao)
 
+        // recupera dados do arquivo
         val data = recoveryFileData()
         val tokenizer = StringTokenizer(data, ":")
         val name = if (tokenizer.hasMoreTokens()) tokenizer.nextToken() else "Sem nome"
@@ -26,6 +27,7 @@ class SaudacaoActivity : AppCompatActivity() {
         }
     }
 
+    // função que recupera dados do arquivo
     private fun recoveryFileData(): String {
         return try {
             val fi = openFileInput("salutation")
