@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SharedPreferences</string>
+    <string name="app_name">file persist</string>
     <string name="name">Nome</string>
     <string name="treatment">Tratamento</string>
     <string name="save_new_salutation">Salvar Nova Saudação</string>
