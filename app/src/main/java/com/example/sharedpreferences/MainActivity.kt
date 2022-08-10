@@ -14,13 +14,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         btnSave.setOnClickListener(View.OnClickListener {
+            // cria/recupera shared preferences
             val salutationPersist = this.getSharedPreferences("salutation", Context.MODE_PRIVATE)
+            // inicia a edição do shared preferences
             val edit = salutationPersist.edit()
 
+            // insere alterações no persist
             edit.putString("name", etName.text.toString())
             edit.putString("treatment", sListTreatment.selectedItem.toString())
+
+            // aplica as alterações no shared preferences
             edit.apply()
 
+            // exibe mensagem de sucesso
             Toast.makeText(this, "Salvo com Sucesso", Toast.LENGTH_SHORT).show()
         })
 

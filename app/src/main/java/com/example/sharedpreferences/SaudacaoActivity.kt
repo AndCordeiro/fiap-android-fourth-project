@@ -12,8 +12,10 @@ class SaudacaoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_saudacao)
 
+        // recupera shared preferences
         val salutationPersist = this.getSharedPreferences("salutation", Context.MODE_PRIVATE)
 
+        // recupera os itens do shared preferences
         val name = salutationPersist.getString("name", "")
         val treatment = salutationPersist.getString("treatment", "")
 
